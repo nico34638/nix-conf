@@ -35,9 +35,13 @@
     man-pages
     man-db
 
-    # dev
+    # Dev dependecies
+
+    ## Cloud tools
     docker
     docker-compose
+
+    # dev
     flex
     python3
     valgrind
@@ -49,6 +53,9 @@
 
     # nix
     nix-zsh-completions
+    # git 
+    gnupg
+
   ];
 
   services.dunst = {

@@ -30,6 +30,12 @@
       npf = "nix profile";
       npfi = "nix profile install";
       ndp = "nix develop";
+
+      # TC 
+      ref = "cd /home/nicolas/Tiger/tc";
+      buildenv = "cd /home/nicolas/Tiger/buildenv";
+      dtc = "docker run --rm -ti --user 1000 --workdir /tc -v ~/Tiger/tc:/tc registry.lrde.epita.fr/tiger-sid";
+      assig = "cd /home/nicolas/Tiger/assignments";
     };
   };
 }
