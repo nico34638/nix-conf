@@ -12,15 +12,44 @@
       theme = "agnoster";
     };
 
+    plugins = [
+      {
+        name = "zsh-nix-shell";
+        file = "nix-shell.plugin.zsh";
+        src = pkgs.fetchFromGitHub {
+          owner = "chisui";
+          repo = "zsh-nix-shell";
+          rev = "v0.5.0";
+          sha256 = "0za4aiwwrlawnia4f29msk822rj9bgcygw6a8a6iikiwzjjz0g91";
+        };
+      }
+    ];
+
     shellAliases = {
       v = "vim";
       c = "cd";
       d = "cd";
       vrc = "vim ~/.vimrc";
 
-      # Cmake alias 
+      # Cmake alias
       csg = "cmake -S . -B build";
       cb = "cmake --build build/";
+
+      # Docker alias
+      dk = "docker";
+      dc = "docker compose";
+      drm = "docker rm ";
+      drmall = "docker rm --force $(docker ps -a -q)";
+      dkill= "docker kill ";
+      dkillall = "docker kill $(docker ps -a -q)";
+      dexec = "docker exec -it";
+      dbuild = "docker build";
+      drun = "docker run";
+      dps = "docker ps";
+      dpsa = "docker ps -a";
+      dls = "docker container ls";
+      dpull= "docker pull";
+      dimages= "docker images";
 
       # GIT  alias 
       gt = "git tag";
@@ -30,6 +59,7 @@
       npf = "nix profile";
       npfi = "nix profile install";
       ndp = "nix develop";
+      hms = "home-manager switch";
 
       # TC 
       ref = "cd /home/nicolas/Tiger/tc";
