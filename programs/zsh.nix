@@ -26,9 +26,8 @@
     ];
 
     shellAliases = {
-      v = "vim";
+      v = "nvim";
       c = "cd";
-      d = "cd";
       vrc = "vim ~/.vimrc";
 
       # Cmake alias
@@ -36,11 +35,11 @@
       cb = "cmake --build build/";
 
       # Docker alias
-      dk = "docker";
+      d = "docker";
       dc = "docker compose";
       drm = "docker rm ";
       drmall = "docker rm --force $(docker ps -a -q)";
-      dkill= "docker kill ";
+      dkill = "docker kill ";
       dkillall = "docker kill $(docker ps -a -q)";
       dexec = "docker exec -it";
       dbuild = "docker build";
@@ -48,8 +47,8 @@
       dps = "docker ps";
       dpsa = "docker ps -a";
       dls = "docker container ls";
-      dpull= "docker pull";
-      dimages= "docker images";
+      dpull = "docker pull";
+      dimages = "docker images";
 
       # GIT  alias 
       gt = "git tag";
@@ -64,7 +63,8 @@
       # TC 
       ref = "cd /home/nicolas/Tiger/tc";
       buildenv = "cd /home/nicolas/Tiger/buildenv";
-      dtc = "docker run --rm -ti --user 1000 --workdir /tc -v ~/Tiger/tc:/tc registry.lrde.epita.fr/tiger-sid";
+      dtg = "docker run --rm -ti --user 1000 --workdir /tc -v ~/Tiger/tc:/tc registry.lrde.epita.fr/tiger-sid";
+      dtc = "docker run --rm -ti --user 1000:users --workdir /tc -v ~/Tiger/tc:/tc registry.lrde.epita.fr/tc-sid";
       assig = "cd /home/nicolas/Tiger/assignments";
     };
   };

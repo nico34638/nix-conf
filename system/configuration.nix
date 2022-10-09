@@ -96,7 +96,7 @@ environment.gnome.excludePackages = (with pkgs; [
   users.users.nicolas = {
     isNormalUser = true;
     description = "nicolas";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "nicolas" ];
     packages = with pkgs; [
       firefox
       thunderbird

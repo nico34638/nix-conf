@@ -3,13 +3,14 @@
 let
   config = {
     core = {
-      editor = "vim";
+      editor = "nvim";
       pager = "less --tabs=4 -RFX";
     };
     init.defaultBranch = "master";
     pull.rebase = true;
   };
-in {
+in
+{
   programs.git = {
     enable = true;
     userName = "Nicolas Fidel";

@@ -35,33 +35,54 @@
     man-pages
     man-db
 
+    # Markdown visualizer
+    mdp
+
     # Dev dependecies
 
     ## Cloud tools
     docker
     docker-compose
 
+    # IDE
+    neovim
+    alacritty
     # dev
+    bear
+    binutils
+    gcc
+    gcc.man
+    ccls
+    clang-tools
     flex
-    python3
     valgrind
     tig
     gdb
-    gcc
-    gcc.man
     gnumake
+    nodejs
 
     # nix
     nix-zsh-completions
+    nixpkgs-fmt
     # git 
     gnupg
 
+
+    # python
+    python3
+    python3.pkgs.pip
+
+    # Fonts/Theme
+    font-manager
+    iosevka
+    (nerdfonts.override { fonts = [ "Hack" ]; })
+    noto-fonts-emoji
+    papirus-icon-theme
   ];
 
   services.dunst = {
     enable = true;
   };
-
   imports = [
     ./programs
   ];
