@@ -67,5 +67,9 @@
       dtc = "docker run --rm -ti --user 1000:users --workdir /tc -v ~/Tiger/tc:/tc registry.lrde.epita.fr/tc-sid";
       assig = "cd /home/nicolas/Tiger/assignments";
     };
+
+    initExtra = ''
+      # Autocomplete for various utilities
+    '';
   };
 }

@@ -20,7 +20,7 @@
   # changes in each release.
   home.stateVersion = "22.05";
 
-  home.packages = with pkgs; [ 
+  home.packages = with pkgs; [
     htop
     tree
     # communication tools
@@ -60,11 +60,16 @@
     gdb
     gnumake
     nodejs
-
+    terraform-lsp
+    nodePackages_latest.bash-language-server
+    nodePackages_latest.yaml-language-server
+    nodePackages.pyright
+    black
     # nix
     nix-zsh-completions
     nixpkgs-fmt
-    # git 
+    rnix-lsp
+    # git
     gnupg
 
 
@@ -78,6 +83,9 @@
     (nerdfonts.override { fonts = [ "Hack" ]; })
     noto-fonts-emoji
     papirus-icon-theme
+
+    postgresql
+    pgcli
   ];
 
   services.dunst = {
